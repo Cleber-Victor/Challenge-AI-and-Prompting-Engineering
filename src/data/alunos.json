@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "nome": "Thiago 'Zequinha' Silva",
+    "idade": 8,
+    "nivel_conhecimento": "iniciante",
+    "estilo_aprendizado": "cinestésico"
+  },
+  {
+    "id": 2,
+    "nome": "Beatriz Lopes",
+    "idade": 16,
+    "nivel_conhecimento": "intermediário",
+    "estilo_aprendizado": "visual"
+  },
+  {
+    "id": 3,
+    "nome": "Carlos Drummond",
+    "idade": 45,
+    "nivel_conhecimento": "iniciante",
+    "estilo_aprendizado": "auditivo"
+  },
+  {
+    "id": 4,
+    "nome": "Dona Alzira",
+    "idade": 72,
+    "nivel_conhecimento": "iniciante",
+    "estilo_aprendizado": "leitura-escrita"
+  },
+  {
+    "id": 5,
+    "nome": "Dr. Helena Schmidt",
+    "idade": 38,
+    "nivel_conhecimento": "avançado",
+    "estilo_aprendizado": "leitura-escrita"
+  }
+]
