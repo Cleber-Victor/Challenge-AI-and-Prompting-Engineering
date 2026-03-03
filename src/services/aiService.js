@@ -10,12 +10,14 @@ dotenv.config({ path: path.resolve(__dirname, "../../.env") });
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
-async function main() {
-  const response = await ai.models.generateContent({
-    model: "gemini-3-flash-preview",
-    contents: "Explain how the world works in a few words",
-  });
-  console.log(response.text);
-}
+const aiService = {
+  async sendRequest(promptGerado) {
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: promptGerado,
+    });
+    return response;
+  },
+};
 
-main();
+export default aiService;
