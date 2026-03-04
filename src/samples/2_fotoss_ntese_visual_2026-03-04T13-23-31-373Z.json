@@ -1,0 +1,10 @@
+{
+  "aluno_id": "2",
+  "topico": "Fotossíntese",
+  "categoria": "visual",
+  "versao_prompt": "1.0",
+  "data_geracao": "2026-03-04T13:23:31.373Z",
+  "conteudo": {
+    "diagrama_ascii": "         FOTOSSÍNTESE\n         +-- Onde?\n         |   +-- Cloroplasto\n         |       +-- Clorofila\n         +-- Entradas\n         |   +-- Luz\n         |   +-- CO2\n         |   +-- H2O\n         +-- Etapas\n         |   +-- Fase Clara (Luz)\n         |   +-- Fase Escura (Calvin)\n         +-- Saídas\n             +-- Glicose\n             +-- O2"
+  }
+}

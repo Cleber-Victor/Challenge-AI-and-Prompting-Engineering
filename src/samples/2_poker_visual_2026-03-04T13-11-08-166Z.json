@@ -1,0 +1,10 @@
+{
+  "aluno_id": "2",
+  "topico": "Poker",
+  "categoria": "visual",
+  "versao_prompt": "1.0",
+  "data_geracao": "2026-03-04T13:11:08.166Z",
+  "conteudo": {
+    "diagrama_ascii": "Poker Estratégia\n+-- Pré-Flop\n|   +-- Posição (EP, MP, LP)\n|   +-- Seleção Mãos (Ranges)\n|   +-- 3-Bet / Fold\n+-- Pós-Flop\n|   +-- C-Bet (Continuation Bet)\n|   +-- Pot/Implied Odds\n|   +-- Valor vs Blefe\n+-- Leitura Jogo\n|   +-- Tipos Jogador\n|   +-- Padrões / Tells\n+-- Gestão BR (Bankroll)"
+  }
+}

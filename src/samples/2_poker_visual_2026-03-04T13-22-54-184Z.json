@@ -1,0 +1,10 @@
+{
+  "aluno_id": "2",
+  "topico": "Poker",
+  "categoria": "visual",
+  "versao_prompt": "1.0",
+  "data_geracao": "2026-03-04T13:22:54.184Z",
+  "conteudo": {
+    "diagrama_ascii": "+-- POKER: Estratégia Intermediária\n|   +-- PRÉ-FLOP\n|   |   +-- Posição\n|   |   +-- Ranges (Abertura/3Bet)\n|   +-- PÓS-FLOP\n|   |   +-- Bet Sizing\n|   |   +-- Pot Odds\n|   |   +-- Leitura (Tells/Padrões)\n|   |   +-- Bluffs vs Value\n|   +-- GESTÃO\n|   |   +-- Bankroll\n|   |   +-- Mindset"
+  }
+}

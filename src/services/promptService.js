@@ -1,8 +1,12 @@
 import studentService from "./readStudant.js";
 
 const promptService = {
-  async buildPromptExplicacaoConceitual(studentId, topic) {
+  async buildPromptExplicacaoConceitual(studentId, topic, version = 'v2') {
     const student = await studentService.getById(studentId);
+
+    if (version === 'v1') {
+      return `Explique o conceito de ${topic} para ${student.nome}.`;
+    }
 
     const persona = `Você é um pesquisador e educador renomado na área de ${topic}. Sua missão é transformar conceitos complexos em conhecimento acessível.`;
 
@@ -20,8 +24,12 @@ const promptService = {
     return `${persona}\n\nPERFIL: ${context}\n\nTAREFA: ${task}\n\nREQUISITO: ${format}`;
   },
 
-  async buildPromptExemplosPraticos(studentId, topic) {
+  async buildPromptExemplosPraticos(studentId, topic, version = 'v2') {
     const student = await studentService.getById(studentId);
+
+    if (version === 'v1') {
+      return `Dê 3 exemplos práticos sobre ${topic} para o aluno ${student.nome}.`;
+    }
 
     const persona = `Você é um mentor prático especialista em ${topic}.`;
 
@@ -38,8 +46,12 @@ const promptService = {
     return `${persona}\n\nPERFIL: ${context}\n\nTAREFA: ${task}\n\nREQUISITO: ${format}`;
   },
 
-  async buildPromptPerguntasReflexao(studentId, topic) {
+  async buildPromptPerguntasReflexao(studentId, topic, version = 'v2') {
     const student = await studentService.getById(studentId);
+
+    if (version === 'v1') {
+      return `Faça 3 perguntas de reflexão sobre ${topic} para o aluno.`;
+    }
 
     const persona = `Você é um Tutor Socrático especializado em pensamento crítico para alunos de ${student.idade} anos.`;
 
@@ -57,8 +69,12 @@ const promptService = {
     return `${persona}\n\nPERFIL: ${context}\n\nTAREFA: ${task}\n\nREQUISITO: ${format}`;
   },
 
-  async buildPromptResumoVisual(studentId, topic) {
+  async buildPromptResumoVisual(studentId, topic, version = 'v2') {
     const student = await studentService.getById(studentId);
+
+    if (version === 'v1') {
+      return `Crie um resumo visual ou mapa mental sobre ${topic}.`;
+    }
 
     const persona = `Você é um Designer Instrucional veterano especialista em ${topic}.`;
 

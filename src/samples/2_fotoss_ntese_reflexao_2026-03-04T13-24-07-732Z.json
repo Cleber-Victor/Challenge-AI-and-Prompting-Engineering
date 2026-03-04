@@ -1,0 +1,23 @@
+{
+  "aluno_id": "2",
+  "topico": "Fotossíntese",
+  "categoria": "reflexao",
+  "versao_prompt": "1.0",
+  "data_geracao": "2026-03-04T13:24:07.732Z",
+  "conteudo": {
+    "perguntas": [
+      {
+        "id": 1,
+        "pergunta": "Imagine que você é uma célula de folha de uma árvore em uma floresta densa, e as folhas de cima bloqueiam 90% da luz solar que chega até você. Se a sua 'fábrica' de fotossíntese opera com apenas 10% da luz necessária, qual seria a sua prioridade imediata para evitar a 'fome' e o que você esperaria ver acontecer com a cor e a estrutura das folhas que estão recebendo pouca luz?"
+      },
+      {
+        "id": 2,
+        "pergunta": "Em um dia muito quente e seco, uma planta está perdendo água rapidamente pelos estômatos, que também são a porta de entrada para o dióxido de carbono. Se você fosse o 'gerente' da planta, qual seria a sua decisão mais crítica para equilibrar a necessidade de produzir glicose (capturando CO2) com a urgência de evitar a desidratação severa? O que essa decisão faria você observar visualmente no aspecto da planta ao longo do dia?"
+      },
+      {
+        "id": 3,
+        "pergunta": "Imagine um futuro onde, por alguma razão, os níveis de dióxido de carbono na atmosfera caíram drasticamente para níveis que dificultam severamente a fotossíntese. Como uma planta individual poderia tentar 'otimizar' sua captação de CO2 e, mais importante, qual seria a mudança mais impactante que você veria na paisagem global e na diversidade de vida animal se a produção de glicose e oxigênio pelas plantas fosse severamente comprometida?"
+      }
+    ]
+  }
+}
