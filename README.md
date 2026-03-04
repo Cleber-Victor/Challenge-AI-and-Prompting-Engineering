@@ -51,7 +51,7 @@ Antes de iniciar você vai precisar do [Node.js](https://nodejs.org/) instalado 
    npm start
    ```
    *(Ou execute `node src/index.js` caso o script start não tenha sido configurado).* 
-   O servidor subirá em portas especificadas (normalmente `http://localhost:3000`). Acesse a página via navegador para usar a interface.
+   O servidor subirá na porta especificada na variável PORT (`http://localhost:${PORT}`). Acesse a página via navegador para usar a interface.
 
 ## 📖 Como Usar as Features
 
