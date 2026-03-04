@@ -1,45 +1,45 @@
-// No seu arquivo principal (ex: src/index.js)
 import express from "express";
 import promptService from "./services/promptService.js";
 import aiService from "./services/aiService.js";
-// import storageService from "./services/storageService.js";
+import storageService from "./services/storageService.js";
 
 const app = express();
 const PORT = 3005;
 
-// LINHA OBRIGATÓRIA: Permite que o Express entenda o JSON enviado no req.body
 app.use(express.json());
 
 app.post("/generate", async (req, res) => {
   try {
     const studentId = req.body.studentId;
     const topic = req.body.topic;
-    const contentType = req.body.contentType;
-    // contentType pode ser: 'conceitual', 'pratico', 'reflexao' ou 'visual' [cite: 11, 12, 13, 15]
 
-    console.log("📥 Recebido:", { studentId, topic, contentType });
+    console.log("Recebido:", { studentId, topic });
 
-    // Passo 1: O Prompt Service busca o aluno no JSON e monta o prompt técnico
-    const prompt = await promptService.buildPrompt(
-      studentId,
-      topic,
-      contentType,
-    );
-
-    console.log("🚀 Prompt Gerado no Terminal:\n", prompt);
-
-    // Passo 2 e 3 comentados para o teste
-    const result = await aiService.sendRequest(prompt);
-    // const savedData = await storageService.saveOutput(...)
-
-    // Retornamos o prompt na resposta para facilitar a visualização
+    const [promptConc, promptPrat, promptRefl, promptVis] = await Promise.all([
+      promptService.buildPromptExplicacaoConceitual(studentId, topic),
+      promptService.buildPromptExemplosPraticos(studentId, topic),
+      promptService.buildPromptPerguntasReflexao(studentId, topic),
+      promptService.buildPromptResumoVisual(studentId, topic),
+    ]);
+    console.log("Prompt Gerado no Terminal:\n", promptConc);
+    // Passo 2: Enviar cada prompt para a IA (aiService) [cite: 20]
+    // Aqui assumimos que seu aiService já lida com a comunicação com a API (Gemini/GPT)
+    const resultados = await Promise.all([
+      aiService.sendRequest(promptConc),
+      //aiService.sendRequest(promptPrat),
+      //aiService.sendRequest(promptRefl),
+      //aiService.sendRequest(promptVis),
+    ]);
+    const salvamentos = await Promise.all([
+      storageService.saveOutput(studentId, topic, "conceitual", resultados[0]),
+    ]);
     res.json({
       success: true,
-      promptGerado: prompt,
-      resposta: result,
+      promptGerado: promptConc,
+      resposta: resultados[0],
     });
   } catch (error) {
-    console.error("❌ Erro:", error.message);
+    console.error("Erro:", error.message);
     res.status(500).json({ success: false, error: error.message });
   }
 });

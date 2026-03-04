@@ -1,0 +1,11 @@
+{
+  "aluno_id": 2,
+  "topico": "quimica orgânica",
+  "tipo": "conceitual",
+  "versao_prompt": "1.0",
+  "gerado_em": "2026-03-04T00:40:02.495Z",
+  "conteudo": {
+    "raciocinio_pedagogico": "Para atender ao nível intermediário de Beatriz, selecionei termos técnicos fundamentais como 'valência' e 'cadeias carbônicas', integrando-os a uma analogia visual de blocos de montar. A explicação foi estruturada de forma progressiva, partindo da definição elementar até a aplicação prática no cotidiano, respeitando sua preferência por estímulos visuais.",
+    "explicacao": "Imagine que a Química Orgânica é o estudo das peças fundamentais que constroem a vida. O protagonista aqui é o Carbono. Pense nele como uma peça de LEGO muito especial que tem quatro 'encaixes' (braços) livres. Por causa desses quatro braços, o carbono consegue se ligar a outros carbonos e elementos como Hidrogênio e Oxigênio, formando correntes longas, anéis ou estruturas tridimensionais complexas, chamadas de cadeias carbônicas.\n\nEnquanto a química inorgânica lida com minerais e rochas, a Orgânica foca nessas estruturas baseadas em carbono que compõem desde o seu DNA e as proteínas dos seus músculos até o plástico do seu celular e o combustível dos carros. Em resumo: é a ciência que estuda como a 'arquitetura do carbono' permite a existência da vida e de quase tudo que tocamos no dia a dia."
+  }
+}
