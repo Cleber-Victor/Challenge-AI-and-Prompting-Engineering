@@ -1,0 +1,11 @@
+{
+  "aluno_id": "2",
+  "topico": "Revolução Industrial",
+  "categoria": "conceitual",
+  "versao_prompt": "1.0",
+  "data_geracao": "2026-03-04T03:42:13.834Z",
+  "conteudo": {
+    "raciocinio_pedagogico": "A estratégia pedagógica consistiu em traduzir a transição tecnológica do século XVIII para uma linguagem visual e comparativa, utilizando a metáfora de um 'upgrade de sistema'. O conteúdo foi estruturado para destacar a mudança da força física para a mecânica, garantindo que o vocabulário fosse técnico, porém acessível para o nível médio.",
+    "explicacao": "Imagine que o mundo passou por uma atualização de software gigantesca, saindo da versão 'Manual 1.0' para a 'Industrial 2.0'. Antes, quase tudo era feito à mão ou com tração animal, de forma lenta e em pequena escala. A Revolução Industrial, iniciada na Inglaterra por volta de 1760, mudou o jogo ao introduzir máquinas potentes, como a máquina a vapor, que substituíram a força humana.\n\nVisualmente, pense em uma oficina pequena e silenciosa transformando-se em uma fábrica enorme, barulhenta e cheia de chaminés. Esse processo não mudou apenas como fazíamos roupas ou ferramentas; ele redesenhou o mapa das cidades (urbanização), criou novas classes sociais e acelerou o tempo do mundo. Foi o momento em que a humanidade aprendeu a produzir em massa, criando a base tecnológica e econômica que define como vivemos e consumimos hoje."
+  }
+}
