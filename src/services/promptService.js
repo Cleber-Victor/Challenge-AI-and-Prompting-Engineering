@@ -15,7 +15,7 @@ const promptService = {
     3. Estruture a explicação de forma lógica e progressiva.`;
 
     const format = `Retorne EXCLUSIVAMENTE um JSON: 
-    { "raciocinio_pedagogico": "seu processo de pensamento", "explicacao": "texto final" }`;
+    { "explicacao": "texto final da explicação" }`;
 
     return `${persona}\n\nPERFIL: ${context}\n\nTAREFA: ${task}\n\nREQUISITO: ${format}`;
   },
@@ -33,7 +33,7 @@ const promptService = {
     2. Adapte a complexidade para o nível ${student.nivel}.`;
 
     const format = `Retorne EXCLUSIVAMENTE um JSON:
-    { "exemplos": [ { "titulo": "...", "descricao": "...", "contexto_idade": "..." } ] }`;
+    { "exemplos": [ { "titulo": "...", "descricao": "..." } ] }`;
 
     return `${persona}\n\nPERFIL: ${context}\n\nTAREFA: ${task}\n\nREQUISITO: ${format}`;
   },
@@ -52,7 +52,7 @@ const promptService = {
     3. Provoque o sentido ${student.estilo_aprendizado} do aluno.`;
 
     const format = `Retorne EXCLUSIVAMENTE um JSON:
-    { "perguntas": [ { "id": 1, "pergunta": "...", "objetivo_critico": "..." } ] }`;
+    { "perguntas": [ { "id": 1, "pergunta": "..." } ] }`;
 
     return `${persona}\n\nPERFIL: ${context}\n\nTAREFA: ${task}\n\nREQUISITO: ${format}`;
   },
@@ -68,7 +68,7 @@ const promptService = {
     Regras de Design: Máximo 15 linhas/40 colunas, use hierarquia visual (+--, |).`;
 
     const format = `Retorne EXCLUSIVAMENTE um JSON:
-    { "diagrama_ascii": "...", "legenda_didatica": "..." }`;
+    { "diagrama_ascii": "..." }`;
 
     return `${persona}\n\nPERFIL: ${context}\n\nTAREFA: ${task}\n\nREQUISITO: ${format}`;
   },

@@ -2,11 +2,27 @@ import express from "express";
 import promptService from "./services/promptService.js";
 import aiService from "./services/aiService.js";
 import storageService from "./services/storageService.js";
+import studentService from "./services/readStudant.js";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 3005;
 
+app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.json());
+
+app.get("/students", async (req, res) => {
+  try {
+    const students = await studentService.getAll();
+    res.json(students);
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao buscar alunos" });
+  }
+});
 
 app.post("/generate", async (req, res) => {
   try {
@@ -33,10 +49,11 @@ app.post("/generate", async (req, res) => {
     const salvamentos = await Promise.all([
       storageService.saveOutput(studentId, topic, "conceitual", resultados[0]),
     ]);
+
     res.json({
       success: true,
       promptGerado: promptConc,
-      resposta: resultados[0],
+      resposta: salvamentos[0].data.conteudo,
     });
   } catch (error) {
     console.error("Erro:", error.message);
